@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hoverboard</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+	 
+	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
+
+
+	<style>
+		.swiper-pagination {
+			position: absolute;
+			width: 100px;
+			top: 50px;
+			left: 10px;
+		}
+
+		.swiper-pagination-bullet-active {
+			width: 100px !important;
+			border-radius: 5px ;
+			background-color: #aeaeff !important;
+			transition: all 0.3s;
+		}
+
+		.swiper-pagination-bullet {
+			display: block;
+			width: 10px;
+			border-radius: 5px;
+			background-color: #fefefe;
+			opacity: 0.6;
+			transition: all 0.3s;
+			text-align: right;
+			margin: 5px;
+			
+		}
+
+		video{
+			position:fixed;
+			z-index:-1;
+			min-width:100%;
+			min-height:100%;
+			overflow:hidden;
+		}
+
+		#overlay{
+
+			position:fixed;
+			z-index:-1;
+			min-width:100%;
+			min-height:100%;
+			overflow:hidden;
+			/*background-color: #cc99ff;*/
+			background-color: #545474;
+			opacity: 0.6;
+		}
+ 
+	</style>
+</head>
+<body>
+	<!-- <div id="overlay"></div> -->
+	<div id="xy"></div>
+
+<video autoplay loop muted>
+   <source src="./1.mp4" >
+</video>
+<div id="overlay"></div>
+
+    <div class="swiper-pagination"></div>
+	<div class="tile" id="tile"> 
+			<div class="swiper-container">
+
+			    <div class="swiper-wrapper">
+			        <!-- Slides -->
+			        <div class="swiper-slide" id="slide1">
+						<div id="text">
+							Slide 1
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide2">
+						<div id="text">
+							Slide 2
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide3">
+						<div id="text">
+							Slide 3
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide4">
+						<div id="text">
+							Slide 4
+						</div>
+					</div>
+			    </div>
+			    <!-- If we need pagination -->
+
+			</div>
+
+			<div class="swiper-container1">
+
+			    <div class="swiper-wrapper">
+			        <!-- Slides -->
+			        <div class="swiper-slide" id="slide1">
+						<div id="text">
+							Slide 1
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide2">
+						<div id="text">
+							Slide 2
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide3">
+						<div id="text">
+							Slide 3
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide4">
+						<div id="text">
+							Slide 4
+						</div>
+					</div>
+			    </div>
+			</div>
+	</div>
+
+
+
+
+
+
+
+
+
+<script  type="text/javascript">  
+var prevSlide = 0;  
+var curSlide = 1;  
+function eq(){
+	mySwiper1.slideTo(mySwiper.activeIndex, 600, function(){});
+};
+
+function eq1(){
+	mySwiper.slideTo(mySwiper1.activeIndex, 600, function(){});
+};
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    
+    // Navigation arrows
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+    mousewheelControl: true,
+    keyboardControl: true,
+    loop: false,
+    effect: "coverflow",
+    onSlideChangeStart: eq,
+
+    // And if we need scrollbar
+    // scrollbar: '.swiper-scrollbar',
+  });  
+
+
+  var mySwiper1 = new Swiper ('.swiper-container1', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 700,
+
+    mousewheelControl: true,
+    // keyboardControl: true,
+    loop: false,
+    effect: "coverflow",
+    onSlideChangeStart: eq1,
+  });  
+  </script>
+
+
+<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

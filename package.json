@@ -1,0 +1,19 @@
+{
+  "name": "hoverboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iilinegor/hoverboard.git"
+  },
+  "author": "iilinegor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iilinegor/hoverboard/issues"
+  },
+  "homepage": "https://github.com/iilinegor/hoverboard#readme"
+}
