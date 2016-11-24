@@ -57,34 +57,45 @@
 			background-color: #545474;
 			opacity: 0.6;
 		}
- 
+
+		#ti {
+			position: absolute;
+			color: #fefefe;
+			font-size: 50px;
+			left: -100vw;
+			top: 30px;
+			width: 100vw;
+			text-align: center;
+			padding-top: 100px;
+		} 
 	</style>
 </head>
 <body>
 	<!-- <div id="overlay"></div> -->
 
-	
+
 	<div id="xy"></div>
 
 <video autoplay loop muted>
    <source src="./1.mp4" >
 </video>
 <div id="overlay"></div>
-
-    <div class="swiper-pagination">
-    	<li>123</li>
-    	<li>123</li>
-    	<li>123</li>
-    	<li>123</li>
-    </div>
+	<div id="mainframe">
+    <div class="swiper-pagination"></div>
 	<div class="tile" id="tile"> 
 			<div class="swiper-container">
 
 			    <div class="swiper-wrapper">
-			        <!-- Slides -->
 			        <div class="swiper-slide" id="slide1">
 						<div id="text">
 							Slide 1
+								<br/>
+							<button onclick="move(1)">зарегаться</button>
+								<br/>
+							<button onclick="move(2)">заявки</button>
+								<br/>
+							<button onclick="move(3)">поиск</button>
+								<br/>
 						</div>
 					</div>
 			        <div class="swiper-slide" id="slide2">
@@ -103,14 +114,11 @@
 						</div>
 					</div>
 			    </div>
-			    <!-- If we need pagination -->
-
 			</div>
 
 			<div class="swiper-container1">
 
 			    <div class="swiper-wrapper">
-			        <!-- Slides -->
 			        <div class="swiper-slide" id="slide1">
 						<div id="text">
 							Slide 1
@@ -133,15 +141,48 @@
 					</div>
 			    </div>
 			</div>
+		</div>
 	</div>
 
 
+	<div id="ti" >
+		asdasd
+		asd
+		asd
+		<br/>
+		<button onclick="move(0)">поиск</button>
+	</div>
 
+<script  type="text/javascript"> 
 
+function move( num ) {
+	    console.log(num);
+	    mainOn = false;
+	    switch ( num ) {
+	    	case 0: 
+	    		document.querySelector('#mainframe').style = " transform: translate(0vw); transition: all 0.5s ease-in;"
 
+	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in; opacity: 0;"
+	    	break;
 
+	    	case 1: 
+	    		document.querySelector('#mainframe').style = " transform: translate(100vw); transition: all 0.5s ease-in; opacity: 0;"
 
+	    		document.querySelector('#ti').style = " transform: translate(100vw); transition: all 0.5s ease-in; opacity: 1;"
+	    	break;
 
+	    	case 2: 
+	    		document.querySelector('#mainframe').style = " transform: translate(-100vw); transition: all 0.5s ease-in;"
+
+	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in; opacity: 1;"
+	    	break;
+
+	    	case 3: 
+
+	    	break;
+	    }
+	}
+</script>
 
 <script  type="text/javascript">  
 	var prevSlide = 0;  
