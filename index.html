@@ -62,6 +62,8 @@
 </head>
 <body>
 	<!-- <div id="overlay"></div> -->
+
+	
 	<div id="xy"></div>
 
 <video autoplay loop muted>
@@ -69,7 +71,12 @@
 </video>
 <div id="overlay"></div>
 
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination">
+    	<li>123</li>
+    	<li>123</li>
+    	<li>123</li>
+    	<li>123</li>
+    </div>
 	<div class="tile" id="tile"> 
 			<div class="swiper-container">
 
@@ -137,51 +144,50 @@
 
 
 <script  type="text/javascript">  
-var prevSlide = 0;  
-var curSlide = 1;  
-function eq(){
-	mySwiper1.slideTo(mySwiper.activeIndex, 600, function(){});
-};
+	var prevSlide = 0;  
+	var curSlide = 1;  
+	function eq(){
+		mySwiper1.slideTo(mySwiper.activeIndex, 600, function(){});
+	};
 
-function eq1(){
-	mySwiper.slideTo(mySwiper1.activeIndex, 600, function(){});
-};
+	function eq1(){
+		mySwiper.slideTo(mySwiper1.activeIndex, 600, function(){});
+	};
 
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'vertical',
-    speed: 800,
-    // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-    
-    // Navigation arrows
-    // nextButton: '.swiper-button-next',
-    // prevButton: '.swiper-button-prev',
-    mousewheelControl: true,
-    keyboardControl: true,
-    loop: false,
-    effect: "coverflow",
-    onSlideChangeStart: eq,
+	var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		direction: 'vertical',
+		speed: 800,
+		// If we need pagination
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
 
-    // And if we need scrollbar
-    // scrollbar: '.swiper-scrollbar',
-  });  
+		// Navigation arrows
+		// nextButton: '.swiper-button-next',
+		// prevButton: '.swiper-button-prev',
+		mousewheelControl: true,
+		keyboardControl: true,
+		loop: false,
+		effect: "coverflow",
+		onSlideChangeStart: eq,
+
+		// And if we need scrollbar
+		// scrollbar: '.swiper-scrollbar',
+	});  
 
 
-  var mySwiper1 = new Swiper ('.swiper-container1', {
-    // Optional parameters
-    direction: 'vertical',
-    speed: 700,
+	var mySwiper1 = new Swiper ('.swiper-container1', {
+		// Optional parameters
+		direction: 'vertical',
+		speed: 700,
 
-    mousewheelControl: true,
-    // keyboardControl: true,
-    loop: false,
-    effect: "coverflow",
-    onSlideChangeStart: eq1,
-  });  
-  </script>
-
+		mousewheelControl: true,
+		// keyboardControl: true,
+		loop: false,
+		effect: "coverflow",
+		onSlideChangeStart: eq1,
+	});  
+	</script>
 
 <script type="text/javascript" src="./script.js"></script>
 </body>
