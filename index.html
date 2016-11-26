@@ -12,6 +12,13 @@
 
 
 	<style>
+
+	@import url(http://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
+
+		body {
+			font-family: Roboto;
+		}
+
 		.swiper-pagination {
 			position: absolute;
 			width: 100px;
@@ -55,7 +62,7 @@
 			overflow:hidden;
 			/*background-color: #cc99ff;*/
 			background-color: #545474;
-			opacity: 0.6;
+			opacity: 0.3;
 		}
 
 		#ti {
@@ -88,11 +95,15 @@
 			    <div class="swiper-wrapper">
 			        <div class="swiper-slide" id="slide1">
 						<div id="text">
-							Slide 1
+							<img src="https://habrastorage.org/files/9cf/1da/383/9cf1da38367645e2b2d46baa7ce8d2ee.png" style="width: 500px; height:500px; position: absolute; top: calc(100% - 365px); left: 36%" alt="">
+							<!-- Slide 1 -->
+								<br/>
 								<br/>
 							<button onclick="move(1)">зарегаться</button>
 								<br/>
+								<br/>
 							<button onclick="move(2)">заявки</button>
+								<br/>
 								<br/>
 							<button onclick="move(3)">поиск</button>
 								<br/>
@@ -121,7 +132,8 @@
 			    <div class="swiper-wrapper">
 			        <div class="swiper-slide" id="slide1">
 						<div id="text">
-							Slide 1
+							<!-- Slide 1 -->
+							<img src="https://habrastorage.org/files/9cf/1da/383/9cf1da38367645e2b2d46baa7ce8d2ee.png" style="width: 500px; height:500px; position: absolute; top: -250px; left: 36%" alt="">
 						</div>
 					</div>
 			        <div class="swiper-slide" id="slide2">
@@ -146,9 +158,8 @@
 
 
 	<div id="ti" >
-		asdasd
-		asd
-		asd
+		Sing in | up
+		<br/>
 		<br/>
 		<button onclick="move(0)">поиск</button>
 	</div>
@@ -160,21 +171,23 @@ function move( num ) {
 	    mainOn = false;
 	    switch ( num ) {
 	    	case 0: 
-	    		document.querySelector('#mainframe').style = " transform: translate(0vw); transition: all 0.5s ease-in;"
+	    		document.querySelector('#mainframe').style = " transform: translate(0vw); transition: all 0.5s ease-in-out;"
 
-	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in; opacity: 0;"
+	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 0;"
+
+	    		mainOn = true;
 	    	break;
 
 	    	case 1: 
-	    		document.querySelector('#mainframe').style = " transform: translate(100vw); transition: all 0.5s ease-in; opacity: 0;"
+	    		document.querySelector('#mainframe').style = " transform: translate(100vw); transition: all 0.5s ease-in-out; opacity: 0;"
 
-	    		document.querySelector('#ti').style = " transform: translate(100vw); transition: all 0.5s ease-in; opacity: 1;"
+	    		document.querySelector('#ti').style = " transform: translate(100vw); transition: all 0.5s ease-in-out; opacity: 1;"
 	    	break;
 
 	    	case 2: 
-	    		document.querySelector('#mainframe').style = " transform: translate(-100vw); transition: all 0.5s ease-in;"
+	    		document.querySelector('#mainframe').style = " transform: translate(-100vw); transition: all 0.5s ease-in-out;"
 
-	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in; opacity: 1;"
+	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 1;"
 	    	break;
 
 	    	case 3: 
