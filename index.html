@@ -76,19 +76,31 @@
 			padding-top: 100px;
 		} 
 
+
+		#to {
+			position: absolute;
+			color: #fefefe;
+			font-size: 50px;
+			left: 100vw;
+			top: 30px;
+			width: 100vw;
+			text-align: center;
+			padding-top: 100px;
+		} 
+
 		#logoTop {
 			width: 500px; 
 			height: 500px; 
-			position: absolute; 
-			top: calc(100% - 250px); 
+			position: relative; 
+			top: calc(50vh - 265px); 
 			left: calc(50vw - 250px);			
 		}
 
 		#logoBottom {
 			width: 500px; 
-			height:500px; 
-			position: absolute; 
-			top: calc(-250px); 
+			height: 500px; 
+			position: relative; 
+			top: calc(-245px); 
 			left: calc(50vw - 250px);				
 		}
 	</style>
@@ -114,6 +126,13 @@
 
 						<div id="text">
 							<!-- Slide 1 -->
+							
+						</div>
+					</div>
+			        <div class="swiper-slide" id="slide2">
+						<div id="text">
+							Slide 2
+							<br/><br/>
 							<button onclick="move(1)">зарегаться</button>
 								<br/>
 								<br/>
@@ -122,11 +141,6 @@
 								<br/>
 							<button onclick="move(3)">поиск</button>
 								<br/>
-						</div>
-					</div>
-			        <div class="swiper-slide" id="slide2">
-						<div id="text">
-							Slide 2
 						</div>
 					</div>
 			        <div class="swiper-slide" id="slide3">
@@ -176,7 +190,14 @@
 		Sing in | up
 		<br/>
 		<br/>
-		<button onclick="move(0)">поиск</button>
+		<button onclick="move(0)">назад</button>
+	</div>
+
+	<div id="to" >
+		Search & destroy
+		<br/>
+		<br/>
+		<button onclick="move(0)">назад</button>
 	</div>
 
 <script  type="text/javascript"> 
@@ -188,7 +209,9 @@ function move( num ) {
 	    	case 0: 
 	    		document.querySelector('#mainframe').style = " transform: translate(0vw); transition: all 0.5s ease-in-out;"
 
-	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 0;"
+	    		document.querySelector('#ti').style = " transform: translate(-100vw); transition: all 0.5s ease-in-out; opacity: 0;"
+
+	    		document.querySelector('#to').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 0;"
 
 	    		mainOn = true;
 	    	break;
@@ -197,12 +220,16 @@ function move( num ) {
 	    		document.querySelector('#mainframe').style = " transform: translate(100vw); transition: all 0.5s ease-in-out; opacity: 0;"
 
 	    		document.querySelector('#ti').style = " transform: translate(100vw); transition: all 0.5s ease-in-out; opacity: 1;"
+
+	    		document.querySelector('#to').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 0;"
 	    	break;
 
 	    	case 2: 
 	    		document.querySelector('#mainframe').style = " transform: translate(-100vw); transition: all 0.5s ease-in-out;"
 
-	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 1;"
+	    		document.querySelector('#ti').style = " transform: translate(0vw); transition: all 0.5s ease-in-out; opacity: 0;"
+
+	    		document.querySelector('#to').style = " transform: translate(-100vw); transition: all 0.5s ease-in-out; opacity: 1;"
 	    	break;
 
 	    	case 3: 
