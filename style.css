@@ -55,8 +55,8 @@ button {
 
 button:hover {
 	border: none;
-	color: #fefefe;
-	background-color: #343454;
+	/*color: #fefefe;*/
+	background-color: #8484a4;
 	transition: 0.3s ease-in-out;
 }
 
