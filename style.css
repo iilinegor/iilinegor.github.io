@@ -44,6 +44,21 @@ body {
 	text-shadow: 1px 1px 20px black;
 }
 
+button {
+	border: none;
+	color: #343454;
+	background-color: #fefefe;
+	transition: 0.4s ease-in-out;
+	padding: 10px;
+	margin: 40px 20px;
+}
+
+button:hover {
+	border: none;
+	color: #fefefe;
+	background-color: #343454;
+	transition: 0.3s ease-in-out;
+}
 
 
 
